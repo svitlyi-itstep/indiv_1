@@ -10,6 +10,12 @@ class Character:
         self.damage = damage
         self.defence = defence
 
+    def __str__(self):
+        return f' -< {self.name} >-\n'\
+               f' HEALTH: {self.health}\n' \
+               f' DAMAGE: {self.damage}\n' \
+               f' DEFENCE: {self.defence}\n' \
+
     def show_info(self):
         print(
             f' -< {self.name} >-\n',
