@@ -8,7 +8,6 @@ player2 = Berserk(name="Petro", health=120, damage=10)
 
 player1.show_info()
 player2.show_info()
-player1.show_info('Hello!')
 
 while player1.health > 0 and player2.health > 0:
     player1.attack(player2)
