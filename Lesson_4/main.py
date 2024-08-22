@@ -4,8 +4,11 @@ from berserk import Berserk
 player1 = Character("Valera", damage=11)
 player2 = Berserk(name="Petro", health=120, damage=10)
 
+# player1.set_health('hello')
+
 player1.show_info()
 player2.show_info()
+player1.show_info('Hello!')
 
 while player1.health > 0 and player2.health > 0:
     player1.attack(player2)

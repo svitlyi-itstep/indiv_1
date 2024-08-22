@@ -16,6 +16,7 @@ class Character:
                f' DAMAGE: {self.damage}\n' \
                f' DEFENCE: {self.defence}\n' \
 
+
     def show_info(self):
         print(
             f' -< {self.name} >-\n',
@@ -23,6 +24,8 @@ class Character:
             f' DAMAGE: {self.damage}\n',
             f' DEFENCE: {self.defence}\n',
         )
+
+
 
     def take_damage(self, damage):
         self.health -= damage
@@ -33,3 +36,11 @@ class Character:
         if not isinstance(target, Character):
             print('Target must be Character!')
         target.take_damage(self.damage)
+
+    def get_health(self):
+        return self.health
+
+    def set_health(self, health: int):
+        if not isinstance(health, int):
+            raise TypeError('health must be integer')
+        self.health = max(health, 0)
